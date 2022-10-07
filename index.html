@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card__container">
+      <header class="card__header">
+        <div class="card__title-wrapper">
+          <div class="card__img-wrapper">
+            <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+          </div>
+          <div class= "card__title-text-container">
+            <p class="card__title">Report for</p>
+            <h1 class="card__name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="card__time-wrapper">
+          <ul class="card__time-units">
+            <li class="time-unit">Daily</li>
+            <li class="time-unit">Weekly</li>
+            <li class="time-unit">Monthly</li>
+          </ul>
+        </div>
+      </header>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--work">
+          <img src="./images/icon-work.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Work</h2>
+            <h3 class="card__activity-total">32hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 36hrs</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--Play">
+          <img src="./images/icon-play.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Play</h2>
+            <h3 class="card__activity-total">10hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 8hrs</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--study">
+          <img src="./images/icon-study.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Study</h2>
+            <h3 class="card__activity-total">4hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 7hrs</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--exercise">
+          <img src="./images/icon-work.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Exercise</h2>
+            <h3 class="card__activity-total">4hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 5hrs</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--social">
+          <img src="./images/icon-work.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Social</h2>
+            <h3 class="card__activity-total">5hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 10hrs</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header-tab card__header-tab--self-care">
+          <img src="./images/icon-work.svg" alt="" />
+        </div>
+        <div class="card__content-container">
+          <div class="card__current-text-wrapper">
+            <h2 class="card__activity">Self Care</h2>
+            <h3 class="card__activity-total">2hrs</h3>
+          </div>
+          <div class="card__dots-container">
+            <p class="card__dots">...</p>
+          </div>
+          <div class="card__previous-activity-total">Last Week - 2hrs</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
