@@ -46,36 +46,6 @@ h6 {
   isolation: isolate;
 }
 
-/*### Primary
-
-- Blue: hsl(246, 80%, 60%)
-
-- Light red (work): hsl(15, 100%, 70%)
-- Soft blue (play): hsl(195, 74%, 62%)
-- Light red (study): hsl(348, 100%, 68%)
-- Lime green (exercise): hsl(145, 58%, 55%)
-- Violet (social): hsl(264, 64%, 52%)
-- Soft orange (self care): hsl(43, 84%, 65%)
-
-### Neutral
-
-- Very dark blue: hsl(226, 43%, 10%)
-- Dark blue: hsl(235, 46%, 20%)
-- Desaturated blue: hsl(235, 45%, 61%)
-- Pale Blue: hsl(236, 100%, 87%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px (card titles e.g. Work, Play)
-
-### Font
-
-- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
-- Weights: 300, 400, 500
-*/
-
 /*
 =============== 
 Variables
@@ -178,7 +148,7 @@ main {
 .c-container {
   width: 87%;
   display: grid;
-  row-gap: 20px;
+  row-gap: 24px;
   align-items: center;
   justify-items: center;
   margin: 80px 0;
@@ -226,14 +196,14 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .c-tabs__listitem {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -248,57 +218,115 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
+  row-gap: 24px;
   align-items: center;
   justify-items: center;
 }
 
-.c-tabs__listitem {
+.c-tabs__tabpanel--weekly,
+.c-tabs__tabpanel--monthly {
+  display: none;
+}
+
+.c-tabs__listing {
   width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  background-repeat: no-repeat;
+  background-position: top -10px right 20px;
+}
+
+.c-tabs__listing--work {
+  background-color: var(--work-tab-color);
+  background-image: url("./images/icon-work.svg");
+}
+
+.c-tabs__listing--play {
+  background-color: var(--play-tab-color);
+  background-image: url("./images/icon-play.svg");
+}
+.c-tabs__listing--study {
+  background-color: var(--study-tab-color);
+  background-image: url("./images/icon-study.svg");
+}
+.c-tabs__listing--exercise {
+  background-color: var(--exercise-tab-color);
+  background-image: url("./images/icon-exercise.svg");
+}
+.c-tabs__listing--social {
+  background-color: var(--social-tab-color);
+  background-image: url("./images/icon-social.svg");
+}
+.c-tabs__listing--selfcare {
+  background-color: var(--selfcare-tab-color);
+  background-image: url("./images/icon-self-care.svg");
+}
+
+.c-tabs__listing img {
+  margin: -10px 20px 0 0;
 }
 
 .c-card {
   width: 100%;
+  min-height: 125px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--card-bg-color);
   border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
 }
 
-.c-card__tab {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+.c-card__content-container {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  row-gap: 5px;
+  justify-content: start;
   align-items: center;
-  padding-right: 20px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
-.c-card__tab--work {
-  background-color: var(--work-tab-color);
+.c-card__activity {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
-.c-card__tab--play {
-  background-color: var(--play-tab-color);
-}
-.c-card__tab--study {
-  background-color: var(--study-tab-color);
-}
-.c-card__tab--exercise {
-  background-color: var(--exercise-tab-color);
-}
-.c-card__tab--social {
-  background-color: var(--social-tab-color);
-}
-.c-card__tab--selfcare {
-  background-color: var(--selfcare-tab-color);
+.c-card__activity-time {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
-.c-card__tab img {
-  overflow: hidden;
+.c-card__activity-details {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+  align-self: center;
+  display: grid;
+}
+
+.c-card__activity-details img {
+  justify-self: end;
+  align-self: end;
+  margin: 0;
+}
+
+.c-card__previous-heading {
+  justify-self: end;
+  align-self: center;
 }
