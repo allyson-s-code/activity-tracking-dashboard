@@ -116,7 +116,7 @@ h1 {
 }
 
 h1 span {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--main-text-color);
 }
@@ -147,7 +147,10 @@ main {
 
 .c-container {
   width: 87%;
+  max-width: 600px;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(200px, auto) repeat(6, 1fr);
   row-gap: 24px;
   align-items: center;
   justify-items: center;
@@ -158,6 +161,10 @@ main {
 
 .c-intro__container {
   width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,18 +176,31 @@ main {
 .c-intro {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--header-intro-color);
   border-radius: 15px;
-  padding: 30px 25px;
+  padding: 30px 0;
+}
+
+.c-intro__profile-container {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 .c-intro__img {
-  width: 25%;
+  width: 75%;
   border-radius: 50%;
   border: 3px solid #ffffff;
+}
+
+h1 {
+  justify-self: start;
 }
 
 .c-tabs {
@@ -224,8 +244,12 @@ main {
 .c-tabs__tabpanel {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 8;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
   row-gap: 24px;
   align-items: center;
   justify-items: center;
@@ -341,4 +365,227 @@ main {
 .c-card__previous-heading {
   justify-self: end;
   align-self: center;
+}
+
+@media screen and (min-width: 550px) {
+  /*--- General Styles ---*/
+  h1 span {
+    font-size: 2rem;
+  }
+
+  .c-card__activity-time {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  .c-container {
+    width: 80%;
+  }
+
+  /*--- Intro Card ---*/
+
+  .c-intro {
+    padding: 40px 0;
+  }
+
+  .c-tabs {
+    width: 75%;
+  }
+
+  /*--- Activity Panels ---*/
+
+  .c-tabs__listing {
+    min-height: 220px;
+    background-repeat: no-repeat;
+    background-position: top -10px right 20px;
+  }
+
+  .c-card__content-container {
+    width: 80%;
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /*--- General Styles ---*/
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .c-container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+  }
+
+  /*--- Intro Styles ---*/
+  .c-intro__container {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .c-intro {
+    padding: 35px 0;
+  }
+
+  .c-intro__profile-container {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    row-gap: 40px;
+    justify-items: start;
+    align-items: start;
+  }
+
+  .c-intro__img {
+    width: 50%;
+  }
+
+  h1 span {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: 300;
+  }
+
+  .c-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0 0 0 30px;
+  }
+
+  .c-tabs__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+    justify-items: start;
+    align-items: center;
+  }
+
+  /*--- Activity Panel Styles ---*/
+  .c-tabs__tabpanel {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-template-columns: subgrid;
+    grid-template-rows: minmax(240px, 1fr) minmax(240px, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    align-items: stretch;
+    justify-items: center;
+  }
+
+  .c-tabs__tabpanel--weekly,
+  .c-tabs__tabpanel--monthly {
+    display: none;
+  }
+
+  .c-tabs__listing--work {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .c-tabs__listing--play {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .c-tabs__listing--study {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .c-tabs__listing--exercise {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .c-tabs__listing--social {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .c-tabs__listing--selfcare {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .c-card__content-container {
+    display: grid;
+    grid-template-columns: 3fr 0.5fr;
+    grid-template-rows: 1fr 2.75fr 1fr;
+    justify-content: start;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  .c-card__activity {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .c-card__activity-time {
+    font-size: 3.5rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-self: end;
+  }
+
+  .c-card__previous-heading {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: start;
+  }
+
+  .c-card__activity-details {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+  }
 }
