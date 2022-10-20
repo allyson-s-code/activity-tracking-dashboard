@@ -167,7 +167,7 @@ main {
   grid-row-end: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--card-bg-color);
   border-radius: 15px;
@@ -177,7 +177,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--header-intro-color);
   border-radius: 15px;
@@ -416,6 +416,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
   }
+
   main {
     width: 100%;
     margin: 0;
@@ -436,17 +437,21 @@ h1 {
 
   /*--- Intro Styles ---*/
   .c-intro__container {
-    display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
+    align-self: stretch;
   }
 
   .c-intro {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     padding: 35px 0;
+    align-self: stretch;
   }
 
   .c-intro__profile-container {
@@ -460,7 +465,7 @@ h1 {
   }
 
   .c-intro__img {
-    width: 50%;
+    width: 45%;
   }
 
   h1 span {
@@ -470,6 +475,8 @@ h1 {
   }
 
   .c-tabs {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -494,7 +501,7 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-template-columns: subgrid;
-    grid-template-rows: minmax(240px, 1fr) minmax(240px, 1fr);
+    grid-template-rows: minmax(245px, auto) minmax(245px, auto);
     row-gap: 30px;
     column-gap: 30px;
     align-items: stretch;
