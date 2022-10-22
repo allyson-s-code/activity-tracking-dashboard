@@ -235,7 +235,7 @@ h1 {
   color: #ffffff;
 }
 
-.c-tabs__tab-button:active {
+.active {
   color: #ffffff;
 }
 
@@ -255,8 +255,7 @@ h1 {
   justify-items: center;
 }
 
-.c-tabs__tabpanel--weekly,
-.c-tabs__tabpanel--monthly {
+.hide {
   display: none;
 }
 
@@ -506,11 +505,6 @@ h1 {
     column-gap: 30px;
     align-items: stretch;
     justify-items: center;
-  }
-
-  .c-tabs__tabpanel--weekly,
-  .c-tabs__tabpanel--monthly {
-    display: none;
   }
 
   .c-tabs__listing--work {

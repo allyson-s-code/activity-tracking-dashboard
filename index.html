@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script>
 
 </head>
 
@@ -33,257 +34,20 @@
         <div class="c-tabs">
           <ul class="c-tabs__list">
             <li class="c-tabs__listitem">
-              <button class="c-tabs__tab-button">Daily</button>
+              <button class="c-tabs__tab-button c-tabs__tab-button--daily" aria-pressed="false">Daily</button>
             </li>
             <li class="c-tabs__listitem">
-              <button class="c-tabs__tab-button">Weekly</button>
+              <button class="c-tabs__tab-button c-tabs__tab-button--weekly active" aria-pressed="true">Weekly</button>
             </li>
             <li class="c-tabs__listitem">
-              <button class="c-tabs__tab-button">Monthly</button>
+              <button class="c-tabs__tab-button c-tabs__tab-button--monthly" aria-pressed="false">Monthly</button>
             </li>
           </ul>
         </div>
       </header>
 
-      <div class="c-tabs__tabpanel c-tabs__tabpanel--daily">
-        <div class="c-tabs__listing c-tabs__listing--work">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Work</h2>
-              <span class="c-card__activity-time">5hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">7hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--play">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Play</h2>
-              <span class="c-card__activity-time">1hr</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">2hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--study">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Study</h2>
-              <span class="c-card__activity-time">0hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">1hr</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--exercise">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Exercise</h2>
-              <span class="c-card__activity-time">1hr</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">1hr</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--social">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Social</h2>
-              <span class="c-card__activity-time">1hr</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">3hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--selfcare">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Self Care</h2>
-              <span class="c-card__activity-time">0hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">1hr</span></h3>
-            </div>
-          </div>
-        </div>
-
-      <div class="c-tabs__tabpanel c-tabs__tabpanel--weekly" >
-        <div class="c-tabs__listing c-tabs__listing--work">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Work</h2>
-              <span class="c-card__activity-time">32hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">36hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--play">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Play</h2>
-              <span class="c-card__activity-time">10hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">8hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--study">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Study</h2>
-              <span class="c-card__activity-time">4hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">7hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--exercise">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Exercise</h2>
-              <span class="c-card__activity-time">4hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">5hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--social">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Social</h2>
-              <span class="c-card__activity-time">5hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">10hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--selfcare">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Self Care</h2>
-              <span class="c-card__activity-time">2hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">2hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-      <div class="c-tabs__tabpanel c-tabs__tabpanel--monthly" >
-        <div class="c-tabs__listing c-tabs__listing--work">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Work</h2>
-              <span class="c-card__activity-time">103hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">128hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--play">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Play</h2>
-              <span class="c-card__activity-time">23hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">29hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--study">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Study</h2>
-              <span class="c-card__activity-time">13hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">19hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--exercise">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Exercise</h2>
-              <span class="c-card__activity-time">11hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">18hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--social">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Social</h2>
-              <span class="c-card__activity-time">21hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">23hrs</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-tabs__listing c-tabs__listing--selfcare">
-          <div class="c-card">
-            <div class="c-card__content-container">
-              <h2 class="c-card__activity">Self Care</h2>
-              <span class="c-card__activity-time">7hrs</span>
-              <a href="#" class="c-card__activity-details">
-                  <img src="images/icon-ellipsis.svg" />
-              </a>
-              <h3 class="c-card__previous-heading">Last Week - <span class="c-card__previous-total">11hrs</span></h3>
-            </div>
-          </div>
-        </div>
+      <div class="c-tabs__tabpanel" >
       </div> 
-      
-    </div> 
   </main>
 </body>
 </html>
