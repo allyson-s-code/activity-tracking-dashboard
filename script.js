@@ -23,7 +23,7 @@ const getData = async function () {
                         <h2 class="c-card__activity">${activityTitle}</h2>
                         <span class="c-card__activity-time">${currentHrs}</span>
                         <a href="#" class="c-card__activity-details">
-                            <img src="images/icon-ellipsis.svg" />
+                            <img src="images/icon-ellipsis.svg" alt="get more information"/>
                         </a>
                         <h3 class="c-card__previous-heading">${previousMessage(
                           currentSetting
