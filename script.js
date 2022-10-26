@@ -80,4 +80,5 @@ function previousMessage(currentSetting) {
   }
 }
 
+//render activity panel
 getData(currentSetting);

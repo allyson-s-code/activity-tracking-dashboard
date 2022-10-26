@@ -185,7 +185,7 @@ main {
 }
 
 .c-intro__profile-container {
-  width: 85%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
@@ -195,6 +195,7 @@ main {
 
 .c-intro__img {
   width: 75%;
+  max-width: 100px;
   border-radius: 50%;
   border: 3px solid #ffffff;
 }
@@ -366,7 +367,7 @@ h1 {
   align-self: center;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 520px) {
   /*--- General Styles ---*/
   h1 span {
     font-size: 2rem;
@@ -392,6 +393,11 @@ h1 {
 
   .c-tabs {
     width: 75%;
+  }
+
+  .c-intro__title {
+    justify-self: start;
+    padding-left: 10px;
   }
 
   /*--- Activity Panels ---*/
@@ -423,7 +429,7 @@ h1 {
 
   .c-container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1110px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
